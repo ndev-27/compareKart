@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Untitled</title>
+    
+
+  </head>
+    
+  <body>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CompareKart</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:linear-gradient(to bottom right,#0d1117,#111827,#0d1117);
+  color:#e6edf3;
+  min-height:100vh;
+  padding:30px;
+}
+
+.container{
+  max-width:1400px;
+  margin:auto;
+}
+
+.hero{
+  text-align:center;
+  margin-bottom:50px;
+}
+
+.hero h1{
+  font-size:48px;
+  margin-bottom:10px;
+}
+
+.hero p{
+  color:#8b949e;
+  font-size:18px;
+}
+
+.section-title{
+  font-size:28px;
+  margin-bottom:25px;
+  color:#58a6ff;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:25px;
+  margin-bottom:50px;
+}
+
+.card{
+  background:#161b22;
+  padding:25px;
+  border-radius:20px;
+  transition:0.3s;
+  border:1px solid rgba(255,255,255,0.08);
+  box-shadow:0 0 20px rgba(0,0,0,0.3);
+}
+
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 0 25px rgba(88,166,255,0.25);
+}
+
+.card h3{
+  margin-bottom:15px;
+  color:#d4af37;
+}
+
+.card ul{
+  list-style:none;
+}
+
+.card li{
+  margin-bottom:10px;
+  color:#c9d1d9;
+}
+
+.click-item{
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.click-item:hover{
+  color:#58a6ff;
+}
+
+.details{
+  display:none;
+  margin:10px 0 15px 10px;
+  padding:15px;
+  background:#0d1117;
+  border-radius:10px;
+}
+
+.details p{
+  margin-bottom:8px;
+  color:#8b949e;
+  font-size:14px;
+}
+
+.brand-title{
+  color:#58a6ff;
+  margin-top:12px;
+  margin-bottom:8px;
+  font-size:15px;
+  font-weight:600;
+}
+
+@media(max-width:768px){
+
+  .hero h1{
+    font-size:34px;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="hero">
+  <h1>Compare Smart. Buy Smarter.</h1>
+  <p>Compare appliances and discover trusted brands.</p>
+</div>
+
+<h2 class="section-title">Appliance Categories</h2>
+
+<div class="grid">
+
+<!-- Cooling Appliances -->
+
+<div class="card">
+
+<h3>Cooling Appliances</h3>
+
+<ul>
+
+<li onclick="toggleDetails('acDetails')" class="click-item">Air Conditioner</li>
+
+<div id="acDetails" class="details">
+<p>• 3-star vs 5-star rating</p>
+<p>• Inverter vs non-inverter</p>
+<p>• 1 ton / 1.5 ton / 2 ton</p>
+<p>• Copper condenser</p>
+<p>• Cooling speed</p>
+<p>• Electricity consumption</p>
+
+<div class="brand-title">Popular Brands</div>
+
+<p>LG Electronics, Daikin, Voltas, Blue Star, Samsung</p>
+</div>
+
+<li onclick="toggleDetails('fanDetails')" class="click-item">Ceiling Fan</li>
+
+<div id="fanDetails" class="details">
+<p>• BLDC vs normal fan</p>
+<p>• Power consumption</p>
+<p>• Sweep size</p>
+<p>• Remote control</p>
+<p>• Noise level</p>
+
+<div class="brand-title">Popular Brands</div>
+
+<p>Havells, Crompton, Usha, Atomberg</p>
+</div>
+
+<li onclick="toggleDetails('coolerDetails')" class="click-item">Air Cooler</li>
+
+<div id="coolerDetails" class="details">
+<p>• Desert vs tower cooler</p>
+<p>• Tank capacity</p>
+<p>• Air throw</p>
+<p>• Inverter compatibility</p>
+
+<div class="brand-title">Popular Brands</div>
+
+<p>Symphony, Bajaj Electricals, Crompton</p>
+</div>
+
+<li onclick="toggleDetails('geyserDetails')" class="click-item">Geyser</li>
+
+<div id="geyserDetails" class="details">
+<p>• Instant vs storage geyser</p>
+<p>• Heating speed</p>
+<p>• Tank capacity</p>
+<p>• Energy efficiency</p>
+
+<div class="brand-title">Popular Brands</div>
+
+<p>Racold, Havells, AO Smith</p>
+</div>
+
+<li onclick="toggleDetails('lightDetails')" class="click-item">Emergency Light</li>
+
+<div id="lightDetails" class="details">
+<p>• Battery backup</p>
+<p>• LED brightness</p>
+<p>• Charging speed</p>
+<p>• Portability</p>
+
+<div class="brand-title">Popular Brands</div>
+
+<p>Philips, Wipro, Syska</p>
+</div>
+
+</ul>
+
+</div>
+
+<!-- Kitchen Appliances -->
+
+<div class="card">
+
+<h3>Kitchen Appliances</h3>
+
+<ul>
+
+<li onclick="toggleDetails('fridgeDetails')" class="click-item">Refrigerator</li>
+
+<div id="fridgeDetails" class="details">
+<p>• Single door vs double door</p>
+<p>• Frost free vs direct cool</p>
+<p>• Inverter compressor</p>
+<p>• Storage capacity</p>
+
+<div class="brand-title">Popular Brands</div>
+
+<p>LG Electronics, Samsung, Whirlpool, Haier</p>
+</div>
+
+<li onclick="toggleDetails('mixerDetails')" class="click-item">Mixer Grinder</li>
+
+<div id="mixerDetails" class="details">
+<p>• 500W vs 750W motor</p>
+<p>• Number of jars</p>
+<p>• Copper motor</p>
+<p>• Noise level</p>
+
+<div class="brand-title">Popular Brands</div>
+
+<p>Prestige, Sujata, Philips, Butterfly</p>
+</div>
+
+<li onclick="toggleDetails('microwaveDetails')" class="click-item">Microwave Oven</li>
+
+<div id="microwaveDetails" class="details">
+<p>• Solo vs grill vs convection</p>
+<p>• Capacity</p>
+<p>• Auto cook menu</p>
+<p>• Power usage</p>
+
+<div class="brand-title">Popular Brands</div>
+
+<p>IFB Industries, LG Electronics, Samsung</p>
+</div>
+
+<li onclick="toggleDetails('dishwasherDetails')" class="click-item">Dishwasher</li>
+
+<div id="dishwasherDetails" class="details">
+<p>• Capacity</p>
+<p>• Water usage</p>
+<p>• Noise level</p>
+<p>• Energy efficiency</p>
+
+<div class="brand-title">Popular Brands</div>
+
+<p>Bosch, IFB Industries, Siemens</p>
+</div>
+
+<li onclick="toggleDetails('inductionDetails')" class="click-item">Induction Cooktop</li>
+
+<div id="inductionDetails" class="details">
+<p>• Heating speed</p>
+<p>• Safety lock</p>
+<p>• Power consumption</p>
+<p>• Preset cooking modes</p>
+
+<div class="brand-title">Popular Brands</div>
+
+<p>Prestige, Pigeon, Philips</p>
+</div>
+
+</ul>
+
+</div>
+
+<!-- Entertainment -->
+
+<div class="card">
+
+<h3>Entertainment</h3>
+
+<ul>
+
+<li onclick="toggleDetails('tvDetails')" class="click-item">Television (TV)</li>
+
+<div id="tvDetails" class="details">
+<p>• LED vs QLED vs OLED</p>
+<p>• Full HD vs 4K</p>
+<p>• Smart vs non-smart</p>
+<p>• Refresh rate</p>
+
+<div class="brand-title">Popular Brands</div>
+
+<p>Sony, Samsung, TCL, Xiaomi</p>
+</div>
+
+<li onclick="toggleDetails('speakerDetails')" class="click-item">Speakers</li>
+
+<div id="speakerDetails" class="details">
+<p>• Bluetooth vs wired</p>
+<p>• Sound output</p>
+<p>• Battery backup</p>
+<p>• Connectivity</p>
+
+<div class="brand-title">Popular Brands</div>
+
+<p>JBL, boAt, Sony</p>
+</div>
+
+<li onclick="toggleDetails('speakerSmartDetails')" class="click-item">Smart Speaker</li>
+
+<div id="speakerSmartDetails" class="details">
+<p>• Voice assistant support</p>
+<p>• Smart home integration</p>
+<p>• Connectivity</p>
+<p>• Sound quality</p>
+
+<div class="brand-title">Popular Brands</div>
+
+<p>Amazon Echo, Google Nest, Apple HomePod</p>
+</div>
+
+<li onclick="toggleDetails('smarttvDetails')" class="click-item">Smart TV</li>
+
+<div id="smarttvDetails" class="details">
+<p>• Android TV vs Google TV</p>
+<p>• 4K vs Full HD</p>
+<p>• Dolby support</p>
+<p>• Refresh rate</p>
+
+<div class="brand-title">Popular Brands</div>
+
+<p>Sony, Samsung, LG Electronics</p>
+</div>
+
+</ul>
+
+</div>
+
+<!-- Study & Work -->
+
+<div class="card">
+
+<h3>Study & Work</h3>
+
+<ul>
+
+<li onclick="toggleDetails('laptopDetails')" class="click-item">Laptop</li>
+
+<div id="laptopDetails" class="details">
+<p>• Intel vs AMD processor</p>
+<p>• SSD vs HDD</p>
+<p>• RAM size</p>
+<p>• Battery life</p>
+
+<div class="brand-title">Popular Brands</div>
+
+<p>HP, Dell, Lenovo, ASUS</p>
+</div>
+
+<li onclick="toggleDetails('printerDetails')" class="click-item">Printer</li>
+
+<div id="printerDetails" class="details">
+<p>• Ink tank vs cartridge</p>
+<p>• Color vs monochrome</p>
+<p>• Wireless printing</p>
+<p>• Print speed</p>
+
+<div class="brand-title">Popular Brands</div>
+
+<p>HP, Canon, Epson</p>
+</div>
+
+<li onclick="toggleDetails('routerDetails')" class="click-item">Wi-Fi Router</li>
+
+<div id="routerDetails" class="details">
+<p>• Dual band vs single band</p>
+<p>• Coverage range</p>
+<p>• Internet speed</p>
+<p>• Number of connected devices</p>
+
+<div class="brand-title">Popular Brands</div>
+
+<p>TP-Link, D-Link, ASUS, Netgear</p>
+</div>
+
+<li onclick="toggleDetails('inverterDetails')" class="click-item">Inverter</li>
+
+<div id="inverterDetails" class="details">
+<p>• Pure sine wave vs square wave</p>
+<p>• Battery capacity</p>
+<p>• Backup time</p>
+<p>• Charging speed</p>
+
+<div class="brand-title">Popular Brands</div>
+
+<p>Luminous, Microtek, Exide</p>
+</div>
+
+</ul>
+
+</div>
+
+<!-- Home Care -->
+
+<div class="card">
+
+<h3>Home Care</h3>
+
+<ul>
+
+<li onclick="toggleDetails('washingDetails')" class="click-item">Washing Machine</li>
+
+<div id="washingDetails" class="details">
+<p>• Front load vs top load</p>
+<p>• Fully automatic vs semi automatic</p>
+<p>• Drum capacity</p>
+<p>• Inverter motor</p>
+
+<div class="brand-title">Popular Brands</div>
+
+<p>LG Electronics, Samsung, Whirlpool, Bosch</p>
+</div>
+
+<li onclick="toggleDetails('vacuumDetails')" class="click-item">Vacuum Cleaner</li>
+
+<div id="vacuumDetails" class="details">
+<p>• Corded vs cordless</p>
+<p>• Suction power</p>
+<p>• Bag vs bagless</p>
+<p>• Battery backup</p>
+
+<div class="brand-title">Popular Brands</div>
+
+<p>Dyson, Philips, Eureka Forbes</p>
+</div>
+
+<li onclick="toggleDetails('robotDetails')" class="click-item">Robot Vacuum</li>
+
+<div id="robotDetails" class="details">
+<p>• Mapping technology</p>
+<p>• App control</p>
+<p>• Battery life</p>
+<p>• Suction power</p>
+
+<div class="brand-title">Popular Brands</div>
+
+<p>iRobot, Xiaomi, Ecovacs</p>
+</div>
+
+<li onclick="toggleDetails('purifierDetails')" class="click-item">Water Purifier</li>
+
+<div id="purifierDetails" class="details">
+<p>• RO vs UV vs UF</p>
+<p>• Filter life</p>
+<p>• Storage capacity</p>
+<p>• Electricity consumption</p>
+
+<div class="brand-title">Popular Brands</div>
+
+<p>Kent, Aquaguard, Livpure</p>
+</div>
+
+</ul>
+
+</div>
+
+<!-- Personal Care -->
+
+<div class="card">
+
+<h3>Personal Care</h3>
+
+<ul>
+
+<li onclick="toggleDetails('trimmerDetails')" class="click-item">Trimmer</li>
+
+<div id="trimmerDetails" class="details">
+<p>• Blade quality</p>
+<p>• Battery backup</p>
+<p>• Waterproof support</p>
+<p>• Charging speed</p>
+
+<div class="brand-title">Popular Brands</div>
+
+<p>Philips, Mi, Braun</p>
+</div>
+
+<li onclick="toggleDetails('dryerDetails')" class="click-item">Hair Dryer</li>
+
+<div id="dryerDetails" class="details">
+<p>• Wattage</p>
+<p>• Heat settings</p>
+<p>• Foldable design</p>
+<p>• Noise level</p>
+
+<div class="brand-title">Popular Brands</div>
+
+<p>Philips, Havells, Dyson</p>
+</div>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function toggleDetails(id){
+
+  let element = document.getElementById(id);
+
+  if(element.style.display === 'block'){
+    element.style.display = 'none';
+  }
+
+  else{
+    element.style.display = 'block';
+  }
+
+}
+
+</script>
+
+</body>
+</html>
+    
+  </body>
+  
+</html>
